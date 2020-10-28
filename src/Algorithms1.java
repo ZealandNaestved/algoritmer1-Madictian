@@ -8,6 +8,29 @@ import java.util.Random;
  */
 
 public class Algorithms1 {
+            public static String randomBoyName(){
+                String[] liste = new Data().getRandomDrengeNavne();
+                String boyname = liste[(int)(Math.random() * 44)];
+                return boyname;
+            }
+            public static String randomGirlName(){
+                String[] liste2 = new Data().getRandomPigeNavne();
+                String girlname = liste2[(int)(Math.random() * liste2.length)];
+                return girlname;
+    }
+    public static String randomName(){
+                int enten = (int)(Math.random() * 2) + 1;
+        String[] listepiger = new Data().getRandomPigeNavne();
+        String[] listedreange = new Data().getRandomDrengeNavne();
+        String name = "1";
+        if (enten == 1){
+            name = listedreange[(int)(Math.random() * listedreange.length)];
+        }else if(enten == 2){
+            name = listepiger[(int)(Math.random() * listepiger.length)];
+        }
+        return name;
+    }
+
 
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
 
@@ -27,6 +50,9 @@ public class Algorithms1 {
 
     public static void main(String[] args) {
         exampleOfPredictableRandomNumber();
+        System.out.println(randomBoyName());
+        System.out.println(randomGirlName());
+        System.out.println(randomName());
     }
 
     private static void exampleOfPredictableRandomNumber() {
