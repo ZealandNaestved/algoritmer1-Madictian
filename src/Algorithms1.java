@@ -30,6 +30,28 @@ public class Algorithms1 {
         }
         return name;
     }
+    public static char letterTime(){
+                Random rand = new Random();
+                char[] alpha = new char[26];
+
+                for(char ch = 'a'; ch <= 'z'; ++ch){
+                    alpha[ch- 'a']=ch;
+                }
+
+                return alpha[rand.nextInt(alpha.length)];
+    }
+
+    public static void either(){
+                Random random = new Random();
+                int answer = random.nextInt(2);
+                if (answer == 1){
+                    System.out.println("Heads");
+
+                }else{
+                    System.out.println("Tails");
+
+                }
+    }
 
 
     // TODO 1 - Gennemse Data klassen, og skriv gode kommentarer til det
@@ -53,6 +75,8 @@ public class Algorithms1 {
         System.out.println(randomBoyName());
         System.out.println(randomGirlName());
         System.out.println(randomName());
+        System.out.println(letterTime());
+        either();
     }
 
     private static void exampleOfPredictableRandomNumber() {
